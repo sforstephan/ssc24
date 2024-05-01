@@ -1,21 +1,18 @@
-# Project Title
 
-[Optional: Add a brief description of your project here.]
-
-## Table of Contents
+# Table of Contents
 1. [Installation and Usage](#installation-and-usage)
 2. [Datasets](#datasets)
 3. [Sensitivity analysis](#sensitivity-analysis)
 
-## Installation and Usage
+# Installation and Usage
 
-### Model Description
+## Model Description
 A detailed model description using the Odd Protocol is provided in the file [model_description.pdf](model_description.pdf).
 
-### Source Code
+## Source Code
 The source code is provided in the folder [source_code](source_code).
 
-### Running the Model
+## Running the Model
 To run the model, follow these steps:
 
 1. Make sure you have Python installed on your system.
@@ -25,7 +22,7 @@ To run the model, follow these steps:
 5. Use the command line to run `main.py`: `python main.py`
 6. The simulation will create a JSON file named `results.json`, which will be stored in the same folder as `main.py`.
 
-## Datasets
+# Datasets
 
 The repository includes several datasets used in the project. These datasets are stored in the `datasets` folder. Here is a brief description of each dataset:
 
@@ -35,7 +32,7 @@ The repository includes several datasets used in the project. These datasets are
 
 - **data_sensitivity.csv**: This dataset contains data used for a variance-based sensitivity analysis.
 
-## Sensitivity analysis
+# Sensitivity analysis
 
 A comprehensive analysis has been conducted to assess the requied number of simluation runs and the sensitivity of the results to parameter settings. The results of this analysis are provided in the file `sensitivity_analysis.md`. 
 
