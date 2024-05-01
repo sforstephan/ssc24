@@ -1,0 +1,9 @@
+Required packages:
+
+- numpy
+- math
+- random
+- copy
+- SciPy
+- json
+- timeit
