@@ -39,9 +39,9 @@ The repository includes several datasets used in the project. These datasets are
 
 A comprehensive analysis has been conducted to assess the requied number of simluation runs and the sensitivity of the results to parameter settings. The results of this analysis are provided in the file `sensitivity_analysis.md`. 
 
-The **variance stability analysis++ aims to determine the required number of simulation runs to achieve stable results. It provides insights into the variability of the model outputs under different scenarios.
+The **variance stability analysis** aims to determine the required number of simulation runs to achieve stable results. It provides insights into the variability of the model outputs under different scenarios.
 
-The ++variance-based sensitivity analysis++ evaluates the impact of input parameters on the model outputs. By quantifying the sensitivity of the simluation output to various factors, it helps identify influential parameters and understand their relative importance in driving the model behavior.
+The **variance-based sensitivity analysis** evaluates the impact of input parameters on the model outputs. By quantifying the sensitivity of the simluation output to various factors, it helps identify influential parameters and understand their relative importance in driving the model behavior.
 
 
 
