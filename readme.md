@@ -25,13 +25,15 @@ To run the model, follow these steps:
 
 # Datasets
 
-The repository includes several datasets used in the project. These datasets are stored in the `datasets` folder. Here is a brief description of each dataset:
+The repository includes several datasets used in the project. These datasets are stored in the [datasets](datasets) folder. Here is a brief description of each dataset:
 
 - **data_main_analysis.csv**: This dataset contains the primary data used for the main paper analysis.
 
 - **data_variance_stability.csv**: This dataset contains data used for the analysis of variance stability to determine the required number of simulation runs.
 
 - **data_sensitivity.csv**: This dataset contains data used for a variance-based sensitivity analysis.
+
+Please note that the uploaded datasets are compressed (in zip-format).
 
 # Sensitivity analysis
 
