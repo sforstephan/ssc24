@@ -35,7 +35,7 @@ The repository includes several datasets used in the project. These datasets are
 
 # Sensitivity analysis
 
-A comprehensive analysis has been conducted to assess the requied number of simluation runs and the sensitivity of the results to parameter settings. The results of this analysis are provided in the file `sensitivity_analysis.md`. 
+A comprehensive analysis has been conducted to assess the requied number of simluation runs and the sensitivity of the results to parameter settings. The results of this analysis are provided in the file [sensitivity_analysis.md](sensitivity_analysis.md). 
 
 The **variance stability analysis** aims to determine the required number of simulation runs to achieve stable results. It provides insights into the variability of the model outputs under different scenarios.
 
