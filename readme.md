@@ -7,8 +7,8 @@
 
 # Installation and Usage
 
-## Model Description
-A detailed model description using the Odd Protocol is provided in the file [model_description.pdf](model_description.pdf).
+## ODD Model Description
+A detailed model description using the ODD Protocol is provided in the file [model_description.pdf](model_description.pdf).
 
 ## Source Code
 The source code is provided in the folder [source_code](source_code).
