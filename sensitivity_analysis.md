@@ -132,7 +132,7 @@ where the variable $X_i$ indicates the $i^{th}$ input parameter.
 
 The first-order Sobol index quantifies the direct contribution of each input variable $X_i$ to the variance of the output $Y$. It is important to note that the first-order Sobol index ignores interactions with other variables. It is defined as the ratio of the variance of the expected model output with respect to $X_i$ over the total variance of the model output:
 
-$ S_i = \frac{V_{X_i} (E_{\mathbf{X}_{\sim i}}(Y | X_i)) }{V(Y)} $ ,
+$S_i = \frac{V_{X_i} (E_{\mathbf{X}_{\sim i}}(Y | X_i)) }{V(Y)}$ ,
 
 where $X_i$ is the $i^{th}$ input variable, $\mathbf{X}_{\sim i}$ is the vector of all factors other than $i$. The inner expectation operator indicates the mean over all possible values of $\mathbf{X}_{\sim i}$, with $X_i$ fixed. The outer variance is computed over all possible values of $X_i$.
 
@@ -142,7 +142,7 @@ High values of the first-order index indicate that this variable alone (without 
 
 The total-effect Sobol index quantifies, for each input variable $X_i$, the total effect on the variance of the output $Y$. This includes its direct effect and all interaction effects. It is defined as
 
-$ S_{T_i} = 1 - \frac{V_{\mathbf{X}_{\sim i}} (E_{X_i} (Y | \mathbf{X}_{\sim i}))    }{V(Y)} $ , 
+$S_{T_i} = 1 - \frac{V_{\mathbf{X}_{\sim i}} (E_{X_i} (Y | \mathbf{X}_{\sim i}))    }{V(Y)}$ , 
 
 where $V_{\mathbf{X}_{\sim i}}$ is the variance with respect to all variables except $X_i$ and $E_{X_i}$ is the conditional expectation of $X_i$. 
 
