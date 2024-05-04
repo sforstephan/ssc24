@@ -142,7 +142,7 @@ High values of the first-order index indicate that this variable alone (without 
 
 The total-effect Sobol index quantifies, for each input variable $X_i$, the total effect on the variance of the output $Y$. This includes its direct effect and all interaction effects. It is defined as
 
-$S_{T_i} = 1 - \frac{V_{\mathbf{X}_{\sim i}} (E_{X_i} (Y | \mathbf{X}_{\sim i}))    }{V(Y)}$ , 
+$S_{T_i} = 1 - \frac{V_{\mathbf{X}_{\sim i}} (E_{X_i} (Y | \mathbf{X}_{\sim i}))}{V(Y)}$ , 
 
 where $V_{\mathbf{X}_{\sim i}}$ is the variance with respect to all variables except $X_i$ and $E_{X_i}$ is the conditional expectation of $X_i$. 
 
