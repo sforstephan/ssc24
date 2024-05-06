@@ -116,7 +116,7 @@ As previously stated, the analysis of variance stability varies based on the num
 
 ## Interpretation of results<a id="cov-interpretation"></a> 
 
-The above-presented Coefficients of Variation suggest that the variability of the results predominantly falls within low to intermediate ranges. In terms of the number of repetitions needed for the Coefficient of Variation to achieve stability, the aim is to reach an epsilon (i.e., a difference in the coefficients of variation from one column to the next) of 0.1 or lower. The findings indicate that conducting 150 simulation repetitions is necessary for the coefficient of variation to stabilize. Therefore, this study will continue with a set number of 150 repetitions.
+The above-presented Coefficients of Variation suggest that the variability of the results predominantly falls within low to intermediate ranges. In terms of the number of repetitions needed for the Coefficient of Variation to achieve stability, the aim is to reach an epsilon (i.e., a difference in the coefficients of variation from one column to the next) of 0.01 or lower. The findings indicate that conducting 150 simulation repetitions is necessary for the coefficient of variation to stabilize. Therefore, this study will continue with a set number of 150 repetitions.
 
 # VARIANCE-BASED  SENSITIVITY  ANALYSIS
 
