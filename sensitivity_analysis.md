@@ -38,11 +38,11 @@ $c_v = \frac{\sigma}{\mu}$ .
 
 ## Data and implementation<a id="cov-implementation"></a> 
 
-The file [data_variance_stability.csv](datasets/data_variance_stability.csv.zip) contains the simulation results for the scenarios analyzed, while the Python script for calculating the variation coefficients is located in [variance_stability.py](analysis_scripts/variance_stability.py). 
+The file [data_variance_stability.csv](datasets/data_variance_stability.csv.zip) contains the simulation results for the scenarios analyzed, while the Python script for calculating the variation coefficients is located in [variance_stability.py](analysis_scripts/variance_stability.py). [data_variance_stability.csv](datasets/data_variance_stability.csv.zip) is a zipped file, please download and unzip it to see the contents.
 
 The contents of [data_variance_stability.csv](datasets/data_variance_stability.csv.zip) are structured as follows: Each row corresponds to a single simulation run, with columns titled "matrix", "coordination", and "repetitions" detailing the simulation runs' parameter configurations. A summary of the parameters utilized is available [here](#cov-parameter-table), with a detailed explanation of how these parameters are mapped to the codes in [data_variance_stability.csv](datasets/data_variance_stability.csv.zip) provided [here](#cov-mapping). The columns labeled from 0 to 499 track the performance over time, representing the performance recorded at each timestep during a specific simulation run.
 
-To perform the analysis, open [variance_stability.py](analysis_scripts/variance_stability.py) and set the parameters `condition1` (filter for interdependence patterns), `condition2` (filter for decision-making modes), and `condition3` (filter for the number of simulation runs you are interested in) and run the script. The coding od parameters is explainec [below](#cov-maping). The Coefficient of Variation for the selected parameter will be displayed in the terminal window.
+To perform the analysis, open [variance_stability.py](analysis_scripts/variance_stability.py) and set the parameters condition1 (filter for interdependence patterns), condition2 (filter for decision-making modes), and condition3 (filter for the number of simulation runs you are interested in), then run the script. The coding of parameters is explained [below](#cov-mapping). The Coefficient of Variation for the selected parameters will be displayed in the terminal window.
 
 ## Parameter settings<a id="cov-parameters"></a> 
 
@@ -152,11 +152,13 @@ High values for the total-effect Sobol index indicate that the variable (either 
 
 ## Data and implementation<a id="vbsa-implementation"></a> 
 
-The [sensitivity.csv](sensitivity.csv) file contains the simulated data used for conducting a variance-based sensitivity analysis, with the analysis script available in [sensitivity.py](sensitivity.py).
+The [sensitivity.csv](datasets/sensitivity.csv.zip) file contains the simulated data used for conducting a variance-based sensitivity analysis, with the analysis script available in [sensitivity.py](datasets/sensitivity.csv.zip). [sensitivity.py](datasets/sensitivity.csv.zip) is a zipped file, please download and unzip it to see the contents.
 
-This file's data organization is as follows: Each row pertains to an individual simulation run, with columns named "matrix", "coordination", "incentive", and "correlation" detailing the parameters configured for that particular simulation run. The mapping between the agent-based model's [parameters](#vbsa-parameter-table) and the ccodes used in [sensitivity.csv](sensitivity.csv) is detailed [here](#vbsa-mapping). The "fitness" column captures the mean performance (across all timesteps) for each simulation run.
+This file's data organization is as follows: Each row pertains to an individual simulation run, with columns named "matrix", "coordination", "incentive", and "correlation" detailing the parameters configured for that particular simulation run. The mapping between the agent-based model's [parameters](#vbsa-parameter-table) and the ccodes used in [sensitivity.csv](datasets/sensitivity.csv.zip) is detailed [here](#vbsa-mapping). The "fitness" column captures the mean performance (across all timesteps) for each simulation run.
 
-The analysis leveraged the SALib library [[6]](#6) to generate 2^14 distinct parameter combinations. Data for the analysis was then sampled from [sensitivity.csv](sensitivity.csv). Using this data, functions from the SALib library were used to compute the first-order and total-effect Sobol indices.
+The analysis leveraged the SALib library [[6]](#6) to generate 2^14 distinct parameter combinations. Data for the analysis was then sampled from [sensitivity.csv](datasets/sensitivity.csv.zip). Using this data, functions from the SALib library were used to compute the first-order and total-effect Sobol indices.
+
+To perform the analysis, run the script [sensitivity_analysis.py](analysis_scripts/sensitivity_analysis.py). This script reads the dataset from [sensitivity.csv](datasets/sensitivity.csv.zip) and performs a variance-based sensitivity analysis. The first-order and total effect Sobol indices are displayed in the terminal window. Additionally, the script generates a plot of these indices and saves it as sobol_indices.jpg.
 
 
 ## Parameter settings<a id="vbsa-parameters"></a> 
@@ -176,7 +178,7 @@ The analysis leveraged the SALib library [[6]](#6) to generate 2^14 distinct par
 
 ### Mapping between parameters and codes used in provided data<a id="vbsa-mapping"></a> 
 
-The variance-based sensitivity analysis examines every possible combination of parameters as specified in the [parameter table](#vbsa-parameter-table), with the corresponding data available in [data_sensitivity.csv](data_sensitivity.csv). The mapping between the parameters and the codes used in the results file is detailed in the following table:
+The variance-based sensitivity analysis examines every possible combination of parameters as specified in the [parameter table](#vbsa-parameter-table), with the corresponding data available in [data_sensitivity.csv](datasets/data_sensitivity.csv.zip). The mapping between the parameters and the codes used in the results file is detailed in the following table:
 
 
 |Parameter                   |Value        |Column in csv-file | Code in csv-file 
