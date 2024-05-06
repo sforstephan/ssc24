@@ -152,13 +152,13 @@ High values for the total-effect Sobol index indicate that the variable (either 
 
 ## Data and implementation<a id="vbsa-implementation"></a> 
 
-The [sensitivity.csv](../datasets/sensitivity.csv.zip) file contains the simulated data used for conducting a variance-based sensitivity analysis, with the analysis script available in [sensitivity.py](sensitivity.py). [sensitivity.py](../datasets/sensitivity.csv.zip) is a zipped file, please download and unzip it to see the contents.
+The [data_sensitivity.csv](../datasets/data_sensitivity.csv.zip) file contains the simulated data used for conducting a variance-based sensitivity analysis, with the analysis script available in [sensitivity.py](sensitivity.py). [data_sensitivity.csv](../datasets/data_sensitivity.csv.zip) is a zipped file, please download and unzip it to see the contents.
 
-This file's data organization is as follows: Each row pertains to an individual simulation run, with columns named "matrix", "coordination", "incentive", and "correlation" detailing the parameters configured for that particular simulation run. The mapping between the agent-based model's [parameters](#vbsa-parameter-table) and the ccodes used in [sensitivity.csv](../datasets/sensitivity.csv.zip) is detailed [here](#vbsa-mapping). The "fitness" column captures the mean performance (across all timesteps) for each simulation run.
+This file's data organization is as follows: Each row pertains to an individual simulation run, with columns named "matrix", "coordination", "incentive", and "correlation" detailing the parameters configured for that particular simulation run. The mapping between the agent-based model's [parameters](#vbsa-parameter-table) and the ccodes used in [data_sensitivity.csv](../datasets/data_sensitivity.csv.zip) is detailed [here](#vbsa-mapping). The "fitness" column captures the mean performance (across all timesteps) for each simulation run.
 
-The analysis leveraged the SALib library [[6]](#6) to generate 2^14 distinct parameter combinations. Data for the analysis was then sampled from [sensitivity.csv](../datasets/sensitivity.csv.zip). Using this data, functions from the SALib library were used to compute the first-order and total-effect Sobol indices.
+The analysis leveraged the SALib library [[6]](#6) to generate 2^14 distinct parameter combinations. Data for the analysis was then sampled from [data_sensitivity.csv](../datasets/data_sensitivity.csv.zip). Using this data, functions from the SALib library were used to compute the first-order and total-effect Sobol indices.
 
-To perform the analysis, run the script [sensitivity_analysis.py](sensitivity_analysis.py). This script reads the dataset from [sensitivity.csv](../datasets/sensitivity.csv.zip) and performs a variance-based sensitivity analysis. The first-order and total effect Sobol indices are displayed in the terminal window. Additionally, the script generates a plot of these indices and saves it as sobol_indices.jpg.
+To perform the analysis, run the script [sensitivity_analysis.py](sensitivity_analysis.py). This script reads the dataset from [data_sensitivity.csv](../datasets/data_sensitivity.csv.zip) and performs a variance-based sensitivity analysis. The first-order and total effect Sobol indices are displayed in the terminal window. Additionally, the script generates a plot of these indices and saves it as sobol_indices.jpg.
 
 
 ## Parameter settings<a id="vbsa-parameters"></a> 
