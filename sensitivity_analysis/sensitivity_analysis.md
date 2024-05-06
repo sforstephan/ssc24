@@ -158,7 +158,7 @@ This file's data organization is as follows: Each row pertains to an individual 
 
 The analysis leveraged the SALib library [[6]](#6) to generate 2^14 distinct parameter combinations. Data for the analysis was then sampled from [data_sensitivity.csv](../datasets/data_sensitivity.csv.zip). Using this data, functions from the SALib library were used to compute the first-order and total-effect Sobol indices.
 
-To perform the analysis, run the script [sensitivity_analysis.py](sensitivity_analysis.py). This script reads the dataset from [data_sensitivity.csv](../datasets/data_sensitivity.csv.zip) and performs a variance-based sensitivity analysis. The first-order and total effect Sobol indices are displayed in the terminal window. Additionally, the script generates a plot of these indices and saves it as sobol_indices.jpg.
+To perform the analysis, run the script [sensitivity_analysis.py](sensitivity_analysis.py). This script reads the dataset from [data_sensitivity.csv](../datasets/data_sensitivity.csv.zip) and performs a variance-based sensitivity analysis. The first-order and total effect Sobol indices are displayed in the terminal window. Additionally, the script generates a plot of these indices and saves it as `sobol_indices.jpg`.
 
 
 ## Parameter settings<a id="vbsa-parameters"></a> 
