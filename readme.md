@@ -74,12 +74,6 @@ The **variance-based sensitivity analysis** evaluates the impact of input parame
 - results of a Shapiro Wilk test and a Levene test to test for normal distribution of the variable of interest in clusters and homoscedasticity across clusters, 
 - results of a Kruskal-Wallis test 
 
-## Variance stability and sensitivity analysis
-
-###  Variance stability
-Open the script `variance_stability.py` and fix the parameters `condition1` (filter for interdependence pattern), `condition2` (filter for decision-making mode), and `condition3`(filter for the number of simulation runs you are interested in). When the script is run, the Coefficient of Variation for the selected scenario is displayed in the terminal window. 
-
-### Sensitivity analysis
 
 
 
