@@ -38,7 +38,7 @@ $c_v = \frac{\sigma}{\mu}$ .
 
 ## Data and implementation<a id="cov-implementation"></a> 
 
-The file [data_variance_stability.csv](datasets/data_variance_stability.csv.zip) contains the simulation results for the scenarios analyzed, while the Python script for calculating the variation coefficients is located in [variance_stability.py](analysis_scripts/variance_stability.py). [data_variance_stability.csv](datasets/data_variance_stability.csv.zip) is a zipped file, please download and unzip it to see the contents.
+The file [data_variance_stability.csv](../datasets/data_variance_stability.csv.zip) contains the simulation results for the scenarios analyzed, while the Python script for calculating the variation coefficients is located in [variance_stability.py](analysis_scripts/variance_stability.py). [data_variance_stability.csv](datasets/data_variance_stability.csv.zip) is a zipped file, please download and unzip it to see the contents.
 
 The contents of [data_variance_stability.csv](datasets/data_variance_stability.csv.zip) are structured as follows: Each row corresponds to a single simulation run, with columns titled "matrix", "coordination", and "repetitions" detailing the simulation runs' parameter configurations. A summary of the parameters utilized is available [here](#cov-parameter-table), with a detailed explanation of how these parameters are mapped to the codes in [data_variance_stability.csv](datasets/data_variance_stability.csv.zip) provided [here](#cov-mapping). The columns labeled from 0 to 499 track the performance over time, representing the performance recorded at each timestep during a specific simulation run.
 
