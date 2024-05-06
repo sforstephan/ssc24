@@ -7,6 +7,7 @@
 4. [Analysis scripts](#analysis-scripts)
 
 # ODD Model Description
+
 A detailed model description using the ODD protocol is provided in the file [model_description.pdf](model_description.pdf).
 
 # Running the model
@@ -26,13 +27,13 @@ To run the model, follow these steps:
 
 The repository includes several datasets used in the project. These datasets are stored in the [datasets](datasets) folder. Here is a brief description of each dataset:
 
-- **data_main_analysis.csv**: This dataset contains the primary data used for the main paper analysis.
+- [data_main_analysis.csv](datasets/data_main_analysis.csv.zip): This dataset contains the primary data used for the main paper analysis.
 
-- **data_variance_stability.csv**: This dataset contains data used for the analysis of variance stability to determine the required number of simulation runs.
+- [data_variance_stability.csv(datasets/data_variance_stability.csv.zip): This dataset contains data used for the analysis of variance stability to determine the required number of simulation runs.
 
-- **data_sensitivity.csv**: This dataset contains data used for a variance-based sensitivity analysis.
+- [data_sensitivity.csv](datasets/data_sensitivity.csv.zip): This dataset contains data used for a variance-based sensitivity analysis.
 
-Please note that the uploaded datasets are compressed (in zip-format).
+Please note that the uploaded datasets are compressed (in zip-format), please download and upack them to view their contents.
 
 # Sensitivity analysis
 
@@ -45,13 +46,13 @@ The **variance-based sensitivity analysis** evaluates the impact of input parame
 # Analysis scripts
 
 ## Analysis of timeseries stationarity
-1.  Open the script and fix the variables `FROM_timeseries` and `TO_timeseries` to fix the range of the timeseries for which stationarity should be tested
-2.  The script reads the dataset `data_main_analysis.csv` and extracts the timeseries defined by `FROM_timeseries` and `TO_timeseries`
+1.  Open the script [timeseries_stationarity.py](analysis_scripts/timeseries_stationarity.py) and set the variables `FROM_timeseries` and `TO_timeseries` to fix the range of the timeseries for which stationarity should be tested
+2.  The script reads the dataset [data_main_analysis.csv](datasets/data_main_analysis.csv.zip) and extracts the timeseries defined by `FROM_timeseries` and `TO_timeseries`
 3.  The script performs an Augmented Dickey-Fuller test and writes the rest results in the file `stationarity.xlsx`
 
 ## Cluster analysis and posthoc test
-1.  Open the script and fix the variable `variable_of_interest` for the posthoc analysis
-2. The script reads the dataset `data_main_analysis.csv` and 
+1.  Open the script [clustering_and_posthoc_analysis.py](analysis_scripts/clustering_and_posthoc_analysis.py) and set the variable `variable_of_interest` for the posthoc analysis
+2. The script reads the dataset [data_main_analysis.csv](datasets/data_main_analysis.csv.zip) and 
 - performs the Mann-Whitney U test,
 - computes the rank biserial correlation as effect size measure,
 - computes the optimal number of clusters for k-means clustering, 
