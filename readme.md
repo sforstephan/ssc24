@@ -61,7 +61,7 @@ The **variance-based sensitivity analysis** evaluates the impact of input parame
 - computes a G-test (log likelihood ratio test), 
 - performs a Tuckey's test, 
 - test for normality of clusters and homodscedasticity, 
-- performs a Kruskal-Willis test, and 
+- performs a Kruskal-Wallis test, and 
 - performs a Dunn's test.
 2. The following output is stored when the script runs: 
 - `main_analysis.xlsx` contains results of Mann-Whitney U test and effect sizes, 
