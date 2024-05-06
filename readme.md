@@ -45,7 +45,30 @@ The **variance-based sensitivity analysis** evaluates the impact of input parame
 
 # Analysis scripts
 
-TBA
+## Cluster analysis and posthoc test
+1.  Open the script and fix the variable `variable_of_interest` for the posthoc analysis
+2. The script reads the dataset `data_main_analysis.csv` and 
+- performs the Mann-Whitney U test,
+- computes the rank biserial correlation as effect size measure,
+- computes the optimal number of clusters for k-means clustering, 
+- performs k-means clustering, 
+- computes summary statistics for clusters, 
+- computes a G-test (log likelihood ratio test), 
+- performs a Tuckey's test, 
+- test for normality of clusters and homodscedasticity, 
+- performs a Kruskal-Willis test, and 
+- performs a Dunn's test.
+2. The following output is stored when the script runs: 
+- `main_analysis.xlsx` contains results of Mann-Whitney U test and effect sizes, 
+- `data_with_clusters.xlsx` contains the results of the cluster analysis, 
+- `cluster_descriptions.xlsx` contains the summary statistics of clusters, 
+- `dunn_test_results.xlsx` contains the results of a Dunn's test
+3. The follwoing output is displayed in the termincal window when the script runs: 
+- optimal number of clusters computed using Silhouette scores, Davies-Bouldin scores, and Calinski Harabasz scores, 
+- p-values computes using a log-likelihood ratio test for all features, 
+- results of the Tuckey's test, 
+- results of a Shapiro Wilk test and a Levene test to test for normal distribution of the variable of interest in clusters and homoscedasticity across clusters, 
+- results of a Kruskal-Wallis test 
 
 
 
