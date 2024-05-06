@@ -51,8 +51,8 @@ The **variance-based sensitivity analysis** evaluates the impact of input parame
 3. The script performs an Augmented Dickey-Fuller test and records the results in the file stationarity.xlsx.
 
 ## Cluster analysis and posthoc test
-1. Open the script `[clustering_and_posthoc_analysis.py](analysis_scripts/clustering_and_posthoc_analysis.py)` and set the variable `variable_of_interest` for the posthoc analysis.
-2. The script reads the dataset `[data_main_analysis.csv](datasets/data_main_analysis.csv.zip)` and performs several analyses:
+1. Open the script [clustering_and_posthoc_analysis.py](analysis_scripts/clustering_and_posthoc_analysis.py) and set the variable `variable_of_interest` for the posthoc analysis.
+2. The script reads the dataset [data_main_analysis.csv](datasets/data_main_analysis.csv.zip) and performs several analyses:
    - **Mann-Whitney U test**,
    - **Rank biserial correlation** as an effect size measure,
    - **K-means clustering**, including computing the optimal number of clusters,
