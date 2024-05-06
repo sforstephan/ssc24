@@ -38,9 +38,11 @@ $c_v = \frac{\sigma}{\mu}$ .
 
 ## Data and implementation<a id="cov-implementation"></a> 
 
-The file [data_variance_stability.csv](data_variance_stability.csv) contains the simulation results for the scenarios analyzed, while the Python script for calculating the variation coefficients is located in [variance_stability.py](variance_stability.py). 
+The file [data_variance_stability.csv](datasets/data_variance_stability.csv.zip) contains the simulation results for the scenarios analyzed, while the Python script for calculating the variation coefficients is located in [variance_stability.py](analysis_scripts/variance_stability.py). 
 
-The contents of [data_variance_stability.csv](data_variance_stability.csv) are structured as follows: Each row corresponds to a single simulation run, with columns titled "matrix", "coordination", and "repetitions" detailing the simulation runs' parameter configurations. A summary of the parameters utilized is available [here](#cov-parameter-table), with a detailed explanation of how these parameters are mapped to the codes in [data_variance_stability.csv](data_variance_stability.csv) provided [here](#cov-mapping). The columns labeled from 0 to 499 track the performance over time, representing the performance recorded at each timestep during a specific simulation run.
+The contents of [data_variance_stability.csv](datasets/data_variance_stability.csv.zip) are structured as follows: Each row corresponds to a single simulation run, with columns titled "matrix", "coordination", and "repetitions" detailing the simulation runs' parameter configurations. A summary of the parameters utilized is available [here](#cov-parameter-table), with a detailed explanation of how these parameters are mapped to the codes in [data_variance_stability.csv](datasets/data_variance_stability.csv.zip) provided [here](#cov-mapping). The columns labeled from 0 to 499 track the performance over time, representing the performance recorded at each timestep during a specific simulation run.
+
+To perform the analysis, open [variance_stability.py](analysis_scripts/variance_stability.py) and set the parameters `condition1` (filter for interdependence patterns), `condition2` (filter for decision-making modes), and `condition3` (filter for the number of simulation runs you are interested in) and run the script. The coding od parameters is explainec [below](#cov-maping). The Coefficient of Variation for the selected parameter will be displayed in the terminal window.
 
 ## Parameter settings<a id="cov-parameters"></a> 
 
@@ -75,7 +77,7 @@ The interactions conform to the two patterns outlined below. In these patterns, 
 
 ### Mapping between parameters and codes used in provided data<a id="cov-mapping"></a> 
 
-As previously stated, the analysis of variance stability varies based on the number of repetitions, the pattern of interdependence, and the mode of decision-making. The numbers for repetitions are taken directly from the [parameter table](#cov-parameter-table) and applied in [data_variance_stability.csv](data_variance_stability.csv). The coding for interdependence patterns and decision-making modes follows the scheme outlined in the table below.
+As previously stated, the analysis of variance stability varies based on the number of repetitions, the pattern of interdependence, and the mode of decision-making. The numbers for repetitions are taken directly from the [parameter table](#cov-parameter-table) and applied in [data_variance_stability.csv](datasets/data_variance_stability.csv.zip). The coding for interdependence patterns and decision-making modes follows the scheme outlined in the table below.
 
 |Parameter                   |Value        |Column in csv-file  |  Code used in csv-file 
 |----------------------------|-------------|-------------------------|----|
