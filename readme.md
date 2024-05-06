@@ -1,19 +1,18 @@
 
 # Table of Contents
-1. [Installation and Usage](#installation-and-usage)
+1. [ODD Model Description](#odd-model-descriptions)
+1. [Running the model](#running-the-model)
 2. [Datasets](#datasets)
 3. [Sensitivity analysis](#sensitivity-analysis)
 4. [Analysis scripts](#analysis-scripts)
 
-# Installation and Usage
+# ODD Model Description
+A detailed model description using the ODD protocol is provided in the file [model_description.pdf](model_description.pdf).
 
-## ODD Model Description
-A detailed model description using the ODD Protocol is provided in the file [model_description.pdf](model_description.pdf).
+# Running the model
 
-## Source Code
 The source code is provided in the folder [source_code](source_code).
 
-## Running the Model
 To run the model, follow these steps:
 
 1. Make sure you have Python installed on your system.
@@ -76,6 +75,13 @@ The **variance-based sensitivity analysis** evaluates the impact of input parame
 - results of a Kruskal-Wallis test 
 
 ## Variance stability and sensitivity analysis
+
+###  Variance stability
+Open the script `variance_stability.py` and fix the parameters `condition1` (filter for interdependence pattern), `condition2` (filter for decision-making mode), and `condition3`(filter for the number of simulation runs you are interested in). When the script is run, the Coefficient of Variation for the selected scenario is displayed in the terminal window. 
+
+### Sensitivity analysis
+
+
 
 
 
