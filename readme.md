@@ -45,6 +45,11 @@ The **variance-based sensitivity analysis** evaluates the impact of input parame
 
 # Analysis scripts
 
+## Analysis of timeseries stationarity
+1.  Open the script and fix the variables `FROM_timeseries` and `TO_timeseries` to fix the range of the timeseries for which stationarity should be tested
+2.  The script reads the dataset `data_main_analysis.csv` and extracts the timeseries defined by `FROM_timeseries` and `TO_timeseries`
+3.  The script performs an Augmented Dickey-Fuller test and writes the rest results in the file `stationarity.xlsx`
+
 ## Cluster analysis and posthoc test
 1.  Open the script and fix the variable `variable_of_interest` for the posthoc analysis
 2. The script reads the dataset `data_main_analysis.csv` and 
@@ -70,6 +75,7 @@ The **variance-based sensitivity analysis** evaluates the impact of input parame
 - results of a Shapiro Wilk test and a Levene test to test for normal distribution of the variable of interest in clusters and homoscedasticity across clusters, 
 - results of a Kruskal-Wallis test 
 
+## Variance stability and sensitivity analysis
 
 
 
