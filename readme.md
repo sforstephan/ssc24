@@ -1,19 +1,18 @@
 
 # Table of Contents
-1. [Installation and Usage](#installation-and-usage)
+1. [ODD Model Descriptions(#odd-model-descriptions)]
+1. [Running the model](#running-the-model)
 2. [Datasets](#datasets)
 3. [Sensitivity analysis](#sensitivity-analysis)
 4. [Analysis scripts](#analysis-scripts)
 
-# Installation and Usage
-
 ## ODD Model Description
 A detailed model description using the ODD Protocol is provided in the file [model_description.pdf](model_description.pdf).
 
-## Source Code
+# Running the model
+
 The source code is provided in the folder [source_code](source_code).
 
-## Running the Model
 To run the model, follow these steps:
 
 1. Make sure you have Python installed on your system.
