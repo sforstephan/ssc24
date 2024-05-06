@@ -6,7 +6,7 @@
 3. [Sensitivity analysis](#sensitivity-analysis)
 4. [Analysis scripts](#analysis-scripts)
 
-## ODD Model Description
+# ODD Model Description
 A detailed model description using the ODD Protocol is provided in the file [model_description.pdf](model_description.pdf).
 
 # Running the model
