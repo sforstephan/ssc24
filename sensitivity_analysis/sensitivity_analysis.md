@@ -126,29 +126,31 @@ To analyze the sensitivity of the output of the simulation model to variations i
 
 The following explanation of the variance-based sensitivity analysis builds on the elaborations in [[4]](#4) and [[5]](#5). For simplicity, assume a simulation model takes the form of 
 
-$Y = f(X_1, X_2, \dots, X_k)$ ,
+$`Y = f(X_1, X_2, \dots, X_k)`$ ,
 
-where the variable $X_i$ indicates the $i^{th}$ input parameter.
+where the variable $`X_i`$ indicates the $`i^{th}`$ input parameter.
 
 ### First-order effect index
 
-The first-order Sobol index quantifies the direct contribution of each input variable $X_i$ to the variance of the output $Y$. It is important to note that the first-order Sobol index ignores interactions with other variables. It is defined as the ratio of the variance of the expected model output with respect to $X_i$ over the total variance of the model output:
+The first-order Sobol index quantifies the direct contribution of each input variable $`X_i`$ to the variance of the output $`Y`$. It is important to note that the first-order Sobol index ignores interactions with other variables. It is defined as the ratio of the variance of the expected model output with respect to $`X_i`$ over the total variance of the model output:
 
-$S_i = \frac{V_{X_i} (E_{\mathbf{X}_{\sim i}}(Y | X_i)) }{V(Y)}$ ,
+$`S_i = \frac{V_{X_i} (E_{\mathbf{X}_{\sim i}}(Y | X_i)) }{V(Y)}`$ ,
 
-where $X_i$ is the $i^{th}$ input variable, $\mathbf{X}_{\sim i}$ is the vector of all factors other than $i$. The inner expectation operator indicates the mean over all possible values of $\mathbf{X}_{\sim i}$, with $X_i$ fixed. The outer variance is computed over all possible values of $X_i$.
+where $`X_i`$ is the $`i^{th}`$ input variable, $`\mathbf{X}_{\sim i}`$ is the vector of all factors other than $`i`$. The inner expectation operator indicates the mean over all possible values of $`\mathbf{X}_{\sim i}`$, with $`X_i`$ fixed. The outer variance is computed over all possible values of $`X_i`$.
 
-High values of the first-order index indicate that this variable alone (without any interactions with other variables) has a significant impact on the variability of the output $Y$. A low value, in contrast, indicates that this input variable (without any interactions) does not significantly contribute to output variability.
+High values of the first-order index indicate that this variable alone (without any interactions with other variables) has a significant impact on the variability of the output $`Y`$. A low value, in contrast, indicates that this input variable (without any interactions) does not significantly contribute to output variability.
 
 ### Total-effect index
 
-The total-effect Sobol index quantifies, for each input variable $X_i$, the total effect on the variance of the output $Y$. This includes its direct effect and all interaction effects. It is defined as
+The total-effect Sobol index quantifies, for each input variable $`X_i`$, the total effect on the variance of the output $`Y`$. This includes its direct effect and all interaction effects. It is defined as
 
-$S_{T_i} = 1 - \frac{V_{\mathbf{X}_{ \sim i}} (E_{X_i} (Y | \mathbf{X}_{ \sim i}))}{V(Y)}$ , 
+$`
+S_{T_i} = 1 - \frac{V_{\mathbf{X}_{ \sim i}} (E_{X_i} (Y | \mathbf{X}_{ \sim i}))}{V(Y)}
+`$ , 
 
-where $V_{\mathbf{X}_{\sim i}}$ is the variance with respect to all variables except $X_i$ and $E_{X_i}$ is the conditional expectation of $X_i$. 
+where $`V_{\mathbf{X}_{\sim i}}`$ is the variance with respect to all variables except $`X_i`$ and $`E_{X_i}`$ is the conditional expectation of $`X_i`$. 
 
-High values for the total-effect Sobol index indicate that the variable (either alone or in interaction with other input variables) considerably affects the variance of the output $Y$. A low value, instead, indicates that this input variable only has a marginal impact on the variance of the model output.
+High values for the total-effect Sobol index indicate that the variable (either alone or in interaction with other input variables) considerably affects the variance of the output $`Y`$. A low value, instead, indicates that this input variable only has a marginal impact on the variance of the model output.
 
 ## Data and implementation<a id="vbsa-implementation"></a> 
 
@@ -166,14 +168,14 @@ To perform the analysis, run the script [sensitivity_analysis.py](sensitivity_an
 <a id="vbsa-parameter-table"></a> 
 |Parameter                   |Notation     |Range                    |
 |----------------------------|-------------|-------------------------|
-|Repetitions                 |$R$          |150 |
+|Repetitions                 |$`R`$          |150 |
 |Interdependence pattern     |--           |Reciprocal interdependencies <br> Small diagonal block|
-|Correlation of schocks      |$\rho$       |\{-0.5, 0, 0.5\}|
-|Decision-making mode        |--           |Decentral: Collaborative ($p$=0.1) <br> Decentral: Collaborative ($p$=0.2) <br> Decentral: Collaborative ($p$=0.3) <br> Decentral: Silo-based<br> Decentral: Sequential<br> Central|
-|Incentive parameter         |$\lambda$     |\{0.25, 0.5, 0.75, 1\}|
-|Dimensions in decision problem | $N$      |15
-|Time-steps                  |$t$          |500
-|Shock after $\tau$ periods  |$\tau$       |250
+|Correlation of schocks      |$`\rho`$       |\{-0.5, 0, 0.5\}|
+|Decision-making mode        |--           |Decentral: Collaborative ($`p`$=0.1) <br> Decentral: Collaborative ($`p`$=0.2) <br> Decentral: Collaborative ($`p`$=0.3) <br> Decentral: Silo-based<br> Decentral: Sequential<br> Central|
+|Incentive parameter         |$`\lambda`$     |\{0.25, 0.5, 0.75, 1\}|
+|Dimensions in decision problem | $`N`$      |15
+|Time-steps                  |$`t`$          |500
+|Shock after $`\tau`$ periods  |$`\tau`$       |250
 
 
 ### Mapping between parameters and codes used in provided data<a id="vbsa-mapping"></a> 
@@ -184,7 +186,7 @@ The variance-based sensitivity analysis examines every possible combination of p
 |Parameter                   |Value        |Column in csv-file | Code in csv-file 
 |----------------------------|-------------|-------------------------|---|
 |Interdependence pattern     |Reciprocal interdependencies <br> Small diagonal blocks      |matrix | 1 <br> 2
-|Decision-making mode        |Decentral: Collaborative ($p$=0.1) <br> Decentral: Collaborative ($p$=0.2) <br> Decentral: Collaborative ($p$=0.3) <br> Decentral: Silo-based<br> Decentral: Sequential<br> Central|  coordination | 1 <br> 2 <br> 3 <br> 4 <br> 5 <br> 6
+|Decision-making mode        |Decentral: Collaborative ($`p`$=0.1) <br> Decentral: Collaborative ($`p`$=0.2) <br> Decentral: Collaborative ($`p`$=0.3) <br> Decentral: Silo-based<br> Decentral: Sequential<br> Central|  coordination | 1 <br> 2 <br> 3 <br> 4 <br> 5 <br> 6
 |Incentive parameter         |0.25 <br>0.5 <br>0.75<br> 1 | incentive | 1 <br>2 <br>3<br> 4 
 |Correlation of schocks      |-0.5 <br> 0 <br> 0.5 | correlation | 1 <br> 2 <br> 3 
 
