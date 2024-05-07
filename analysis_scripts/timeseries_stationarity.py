@@ -10,7 +10,9 @@ TO_timeseries = 249
 
 def main():
 
-    file_path = os.path.join("datasets", "data_main_analysis.csv")
+    current_dir = os.path.abspath(os.path.dirname(__file__))
+    parent_dir = os.path.dirname(current_dir)
+    file_path = os.path.join(parent_dir, "datasets", "data_main_analysis.csv")
     df = pd.read_csv(file_path)
 
     fitness_cols = [str(i) for i in range(FROM_timeseries, TO_timeseries)]

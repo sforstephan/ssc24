@@ -40,7 +40,9 @@ metric_of_interest = '499_effect_size'  # Example metric, replace with your actu
 def main():
     
     # read dataset
-    file_path = os.path.join('datasets', 'data_main_analysis.csv')
+    current_dir = os.path.abspath(os.path.dirname(__file__))
+    parent_dir = os.path.dirname(current_dir)
+    file_path = os.path.join(parent_dir, 'datasets', 'data_main_analysis.csv')
     df = pd.read_csv(file_path)
 
     #define cols in which fitness is stored

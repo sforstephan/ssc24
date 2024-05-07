@@ -5,7 +5,9 @@ import os
 
 def main():
 
-    file_path = os.path.join('datasets', 'data_variance_stability.csv')
+    current_dir = os.path.abspath(os.path.dirname(__file__))
+    parent_dir = os.path.dirname(current_dir)
+    file_path = os.path.join(parent_dir, 'datasets', 'data_variance_stability.csv')
     df = pd.read_csv(file_path)
 
     # fix conditions following the coding explained in the main file

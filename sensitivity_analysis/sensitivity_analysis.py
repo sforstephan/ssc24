@@ -69,7 +69,9 @@ def plot_sobol_indices(Si, problem, str):
 def compute_sobol_indices(N):
 
     # read the csv file with all simulated scenarios and coded parameter settings
-    file_path = os.path.join('datasets', 'data_sensitivity.csv')
+    current_dir = os.path.abspath(os.path.dirname(__file__))
+    parent_dir = os.path.dirname(current_dir)
+    file_path = os.path.join(parent_dir, 'datasets', 'data_sensitivity.csv')
     
     df = pd.read_csv(file_path)
 
